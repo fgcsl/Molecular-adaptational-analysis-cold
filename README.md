@@ -5,19 +5,19 @@
 
 
 ## Requirement
-##### 1. Standalone blast software
+#### 1. Standalone blast software
 Required standalone blast software on your own computer, you will need to download the BLAST+ software  To see the instructions and get the latest version of BLAST+, go to the
 stant alone blast+
 (https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 
-##### 2. python2
+#### 2. python2
 
-##### 3. pip
+#### 3. pip
 Pip is a package management system that simplifies installation and management of software packages written in Python
 ```
 $ sudo apt-get install python-pip
 ```
-##### 4. Biopython
+#### 4. Biopython
 ```
 $ pip install biopython
 ```
