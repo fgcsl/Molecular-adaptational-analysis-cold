@@ -26,7 +26,7 @@ $ pip install biopython
 #### Step 1: Input
 
 Add query sequence file into query directory and subjects sequence files into  a subject directory make sure file’s name should be end with ".fasta"
-(In our case we add 13 mesophilic as a subject and a one psychrotolerant as a query . In the third step protein blast will done from one query (psychrotolerant) with 14 subjects (mesophilic) independently)
+(In our case we add 13 mesophilic as a subject and a one psychrotolerant as a query . In the third step protein blast will done from one query (psychrotolerant) with 13 subjects (mesophilic) independently)
 
 ```
 $ cp query_file.fasta cold_adaptation_shell_scripts/query .
@@ -44,7 +44,7 @@ Enter your fasta file from remove hypothetical_sequence: enter your_query_file_n
 then,														
 Give output file name for  Non-hypothetical sequences:   give_output_name_non_hypo (eg: abc)
 ```
-#### Step 3: Molecular Analysis: Cold-Hot ratio & Score of Col
+#### Step 3: Molecular Analysis: Cold-Hot ratio & Score of Cold Hot and Neutral proteins 
 Change your directory to subject directory
 ```
 $cd  ../subject
