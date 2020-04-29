@@ -38,6 +38,8 @@ $ cp subject_file.fasta cold_adaptation_shell_scripts/subject .
 To remove Hypothetical Protein Sequence from your query file by running shell script "shell_remove_hypo_sequence.sh":
 run
 ```
+*You need to make the shell script executable using chmod command
+$chmod +x shell_remove_hypo_sequence.sh
 $ ./shell_remove_hypo_sequence.sh 
 it will ask for :													
 Enter your fasta file from remove hypothetical_sequence: enter your_query_file_name (example:arthrobacter_sp.MWB30.fasta)	
@@ -51,6 +53,8 @@ $cd  ../subject
 ```
 Run "fgcsl.sh" script. you need to wait for result it will take 3 to 4 hours or more depends on your proteins sequence. 
 ```
+*You need to make the shell script executable using chmod command
+$chmod +x shell_remove_hypo_sequence.sh
 $  ./fgcsl.sh
 
 Note : Blast output fomat was "-outfmt 6" and evalue cutoff was set to 1e-15; if you want to change the parameters it can me changed at line no 12
