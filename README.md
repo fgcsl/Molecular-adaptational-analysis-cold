@@ -57,9 +57,10 @@ Run "fgcsl.sh" script. you need to wait for result it will take 3 to 4 hours or 
 *You need to make the shell script executable using chmod command
 $chmod +x shell_remove_hypo_sequence.sh
 
+*Note : Blast output fomat was "-outfmt 6" and evalue cutoff was set to 1e-15; if you want to change the parameters it can me changed at line no 12
+
 $  ./fgcsl.sh
 
-Note : Blast output fomat was "-outfmt 6" and evalue cutoff was set to 1e-15; if you want to change the parameters it can me changed at line no 12
 ```
 #### "calculation_perl_program_frquency_12.pl" is a perl program which is use to calculate the frequency of amino acids indicators
   							
