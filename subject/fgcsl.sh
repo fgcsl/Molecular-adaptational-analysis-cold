@@ -217,7 +217,8 @@ sh script_ALL_1ST_INDICATORS
 #sed -i -e 's/_indi_11/_indi_12/g ; s/11_INDICATORS/12_INDICATORS/g' script_ALL_1ST_INDICATORS
 #sh script_ALL_1ST_INDICATORS
 
-
+##################################################################################################################################################
+###################################  Prepairing scripts for One-Sample Student t-test ###########################################################
 
 #row to col add ac =() for t.test
 
@@ -246,8 +247,9 @@ paste lol3 t_test_output > script_T_TEST_COMPLETE_INDICATOR
 sh script_T_TEST_COMPLETE_INDICATOR
 
 
+ #################################################################################################################################################
+############################################# Prepairing script to finding  p-value should be less than 0.05 #####################################
 
-#making script to finding  p-value should be less than 0.05 
 
 for i in ps_*/T_TEST_COMPLETE_INDICATOR*; do echo $i; done | sed "s/_/ /g" | sort -nk 2 | sed "s/ /_/g" | sed "s/.*/Rscript & \| grep \"p-value\" \| awk '\{if \(\$9 <0.05\) print \$0\}' >/g" > make_rscript1
 for i in ps_*/T_TEST_COMPLETE_INDICATOR*; do echo $i; done | sed "s/_/ /g" | sort -nk 2 | sed "s/ /_/g" | sed 's/T_TEST_COMPLETE_INDICATOR_/Rscript_result_indicator_/g' > make_rscript2
@@ -267,13 +269,14 @@ echo "1. Acidic
 6.  Tyrosine
 7.  Tryptophan" > 12_indicators_name
 
+ #################################################################################################################################################
+ ############################## Calculating COLD & HOT RATIO  On the bases of direction of change ################################################
 
-#Calculating COLD & HOT RATIO
 ls -lrth ps_*/Rscript_result_indicator_* | awk '{if ($5>0) print $9}' > Rscript_directories
 ls -lrth ps_*/Rscript_result_indicator_* | awk '{if ($5>0) print $9}' | sed 's/^/cat /g' |sh > Rscript_directories_result
 
-paste Rscript_directories Rscript_directories_result | awk '{if ($4>0) print $0}'  > Rscript_directories_result_together_positive
-paste Rscript_directories Rscript_directories_result | awk '{if ($4<0) print $0}'  > Rscript_directories_result_together_negative
+paste Rscript_directories Rscript_directories_result | awk '{if ($4>0) print $0}'  > Rscript_directories_result_together_positive #direction of change cold (t = +ve)
+paste Rscript_directories Rscript_directories_result | awk '{if ($4<0) print $0}'  > Rscript_directories_result_together_negative #direction of change hot (t = -ve)
 
 grep "Rscript_result_indicator_01" Rscript_directories_result_together_positive > LIST_OF_POSITIVE_INDICATORS_1
 grep "Rscript_result_indicator_01" Rscript_directories_result_together_negative > LIST_OF_NEGATIVE_INDICATORS_1
