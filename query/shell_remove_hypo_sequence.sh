@@ -23,7 +23,8 @@ then
                 echo "Your Non-hypothetical sequences under \"query_protein_sequence\" file"
 		cp query_protein_sequence ../subject
                # echo "Your Non-hypothetical sequences under \"query_protein_sequence\" file"
-		echo "This file is sucssesfully copy in subject directory for further analysis. Please before proceed for next step change your path to subject directory"
+		echo "Non-hypothetical sequences file is sucssesfully copy in subject directory for further analysis. Please before proceed for next step change your path to subject directory"
+		
 		rm all_id hypo_id non_hypo_id
 	else 
 		echo "Error: you dont have subject directory with your query directory"
