@@ -270,7 +270,7 @@ echo "1. Acidic
 7.  Tryptophan" > 12_indicators_name
 
  #################################################################################################################################################
- ############################## Calculating COLD & HOT RATIO  On the bases of direction of change ################################################
+ ############################## On the bases of direction of change Calculating Cold hot Ratio ################################################
 
 ls -lrth ps_*/Rscript_result_indicator_* | awk '{if ($5>0) print $9}' > Rscript_directories
 ls -lrth ps_*/Rscript_result_indicator_* | awk '{if ($5>0) print $9}' | sed 's/^/cat /g' |sh > Rscript_directories_result
