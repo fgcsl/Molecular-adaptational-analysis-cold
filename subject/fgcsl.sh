@@ -650,8 +650,9 @@ awk '{if ($8>=3) print $0}' cold_hot_neutral_score_with_count | sed  "1 i\Protie
 awk '{if ($8<=-3) print $0}' cold_hot_neutral_score_with_count | sed  "1 i\Protien\tAcidic\tProline\tAliphatic\tAromatic\tArg_to_lys\tGravy\ttotal_count" | column -t > HOT_FINAL_SIX_INDICATORS_SCORE
 awk '{if ($8<=2 && $8>=-2) print $0}' cold_hot_neutral_score_with_count | sed  "1 i\Protien\tAcidic\tProline\tAliphatic\tAromatic\tArg_to_lys\tGravy\ttotal_count" | column -t > NEUTRAL_FINAL_SIX_INDICATORS_SCORE
 
-
-#EXTRACT COLD ADAPTATION PROTEIN NAME
+########################################################################################################################################################
+############################################### EXTRACT NAMES COLD ADAPTATION PROTEIN ##################################################################
+########################################################################################################################################################
 
 awk '{print $1}' FINAL_QUERY_MATCH | sed "s/^/grep \"/ g" | sed "s/$/\" query_protein_sequence  /g" > script_extract_query_id_name
 sh script_extract_query_id_name > result_query_id_name
@@ -668,8 +669,11 @@ awk '{$1=""}1' COLD_FINAL_SIX_INDICATORS_SCORE |sed 's/-1/-/g' | sed 's/1/+/g' |
 
 paste COLD_ADAPTATED_PROTEIN_NAMES COLD_FINAL_SIX_INDICATORS_SCORE_01 > COLD_ADAPTATED_PROTEINS_name_score
 
+#######################################################################################################################################################
+#################################################### EXTRACT NAMES OF HOT ADAPTATION PROTEIN  #########################################################
+#######################################################################################################################################################
 
-#EXTRACT HOT ADAPTATION PROTEIN NAME
+
 awk '{print $1}' HOT_FINAL_SIX_INDICATORS_SCORE |sed  '1d' > select_HOT_FINAL_SIX_INDICATORS_SCORE_proteins
 sed 's/.*/grep -w "&" result_query_id_name_ps/' select_HOT_FINAL_SIX_INDICATORS_SCORE_proteins > script_grep_HOT_SCORE_proteins
 
@@ -680,8 +684,9 @@ awk '{print $NF}' HOT_FINAL_SIX_INDICATORS_SCORE > HOT_COUNT
 awk '{$1=""}1' HOT_FINAL_SIX_INDICATORS_SCORE| awk '{$NF=""}1' | sed 's/-1/-/g' | sed 's/1/+/g' | sed 's/0/*/g'| column -t > HOT_FINAL_SIX_INDICATORS_SCORE_01
 paste HOT_ADAPTATED_PROTEIN_NAMES HOT_FINAL_SIX_INDICATORS_SCORE_01 HOT_COUNT > HOT_ADAPTATED_PROTEINS_name_score
 
-
-#EXTRACT Neutral PROTEIN NAME
+#########################################################################################################################################################
+##################################################### EXTRACT NAMES Neutral PROTEIN  ####################################################################
+#########################################################################################################################################################
 awk '{print $1}' NEUTRAL_FINAL_SIX_INDICATORS_SCORE |sed  '1d' > select_NEUTRAL_FINAL_SIX_INDICATORS_SCORE_proteins
 sed 's/.*/grep -w "&" result_query_id_name_ps/' select_NEUTRAL_FINAL_SIX_INDICATORS_SCORE_proteins > script_grep_NEUTRAL_SCORE_proteins
 
@@ -706,14 +711,14 @@ mv *blastp_output *blastp_output_norepeats > Blast_output
 
 #results of Cold Hot Ratio and score chart of six indicators
 
-echo "********************************COLD & HOT RATIO RESULTS UNDER "RESULT_COLD_HOT_RATIO_AND_SCORE" Directory*******************************************"
+echo "********************************COLD & HOT RATIO RESULTS UNDER "RESULT_COLD_HOT_RATIO_AND_SCORE" Directory(folder)*******************************************"
 
 echo "Your COLD_HOT_RATIO for only Gravy : COLD_HOT_RATIO_GRAVY"
 echo "Your COLD_HOT_RATIO without Gravy : COLD_HOT_RATIO_name"
 echo "Your COLD_HOT_RATIO with all indicator + Gravy : COLD_AND_HOT_RATIO_WITH_GRAVY"
 
 
-echo "********************************SCORE RESULTS*********************************************"
+echo "********************************SCORE RESULTS *********************************************"
 echo "COLD_ADAPTATED_PROTEINS_name_score"
 echo "HOT_ADAPTATED_PROTEINS_name_score"
 echo "NEUTRAL_ADAPTATED_PROTEINS_name_score" 
