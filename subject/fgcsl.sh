@@ -710,12 +710,12 @@ mv *.sh calculation* *blastp_output *blastp_output_norepeats *.fasta RESULT_COLD
 mv * molecular_adaptational_analysis/
 mv molecular_adaptational_analysis/main_results/* $PWD
 mkdir Blast_output
-mv *blastp_output *blastp_output_norepeats > Blast_output
+mv *blastp_output *blastp_output_norepeats Blast_output
 
 echo "##########################################################################################################"
 echo "##########################################################################################################"
 #results of Cold Hot Ratio and score chart of six indicators
-echo "********************************COLD & HOT RATIO RESULTS UNDER "RESULT_COLD_HOT_RATIO_AND_SCORE" Directory(folder)*******************************************"
+echo "COLD & HOT RATIO RESULTS UNDER "RESULT_COLD_HOT_RATIO_AND_SCORE" Directory(folder)"
 echo "##########################################################################################################"
 echo "##########################################################################################################"
 
@@ -726,6 +726,10 @@ echo "Your COLD_HOT_RATIO with all indicator + Gravy : COLD_AND_HOT_RATIO_WITH_G
 
 
 echo "********************************SCORE RESULTS *********************************************"
+
 echo "COLD_ADAPTATED_PROTEINS_name_score"
 echo "HOT_ADAPTATED_PROTEINS_name_score"
 echo "NEUTRAL_ADAPTATED_PROTEINS_name_score" 
+
+echo "##########################################################################################################"
+echo "##########################################################################################################"
