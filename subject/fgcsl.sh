@@ -708,7 +708,7 @@ mkdir main_results
 mv *.sh calculation* *blastp_output *blastp_output_norepeats *.fasta RESULT_COLD_HOT_RATIO_AND_SCORE query_protein_sequence main_results/
 #mv !(*.sh|calculation*|molecular_adaptational_analysis|*blastp_output|*blastp_output_norepeats|*.fasta|RESULT_COLD_HOT_RATIO_AND_SCORE|query_protein_sequence) molecular_adaptational_analysis/
 mv * molecular_adaptational_analysis/
-mv molecular_adaptational_analysis/main_results/fgcsl.sh $PWD
+mv molecular_adaptational_analysis/main_results/* $PWD
 mkdir Blast_output
 mv *blastp_output *blastp_output_norepeats > Blast_output
 
