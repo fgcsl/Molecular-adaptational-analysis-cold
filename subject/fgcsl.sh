@@ -712,9 +712,13 @@ mv molecular_adaptational_analysis/main_results/* $PWD
 mkdir Blast_output
 mv *blastp_output *blastp_output_norepeats > Blast_output
 
+echo "##########################################################################################################"
+echo "##########################################################################################################"
 #results of Cold Hot Ratio and score chart of six indicators
-
 echo "********************************COLD & HOT RATIO RESULTS UNDER "RESULT_COLD_HOT_RATIO_AND_SCORE" Directory(folder)*******************************************"
+echo "##########################################################################################################"
+echo "##########################################################################################################"
+
 
 echo "Your COLD_HOT_RATIO for only Gravy : COLD_HOT_RATIO_GRAVY"
 echo "Your COLD_HOT_RATIO without Gravy : COLD_HOT_RATIO_name"
