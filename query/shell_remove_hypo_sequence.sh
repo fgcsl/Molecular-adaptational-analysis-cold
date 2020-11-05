@@ -37,5 +37,5 @@ then
     fi
 else
         echo "This is not a valid file"
-        echo "Sorry, The file you Enter is not exit please check and try again."
+        echo "Sorry, The file you Enter is not exist please check and try again."
 fi
