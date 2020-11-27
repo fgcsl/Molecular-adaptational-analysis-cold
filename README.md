@@ -10,10 +10,10 @@ Required standalone blast software on your own computer, you will need to downlo
 stant alone blast+
 (https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 
-										Or
-
+#### Or
+```
 $ sudo apt install ncbi-blast+
-
+```
 #### 2. python2
 
 #### 3. pip
