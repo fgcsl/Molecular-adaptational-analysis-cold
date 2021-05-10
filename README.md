@@ -25,6 +25,13 @@ $ sudo apt-get install python-pip
 ```
 $ pip install biopython
 ```
+## Installation
+
+```
+$ git clone https://github.com/fgcsl/Molecular-adaptational-analysis-cold.git
+```
+
+
 ## Steps
 
 #### Step 1: Input
