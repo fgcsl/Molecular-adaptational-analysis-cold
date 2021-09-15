@@ -1,4 +1,4 @@
-# Molecular adaptational analysis
+# Molecular adaptational analysis	Publication Link: (https://www.sciencedirect.com/science/article/abs/pii/S0888754320320371)
 
 The Molecular adaptational analysis were done on the bases of Six indices (referred to as cold-adaptor indicators) namely- frequency of acidic residues; proline residues; aromaticity; aliphacity; grand average of hydrophobicity (GRAVY); and the ratio of arginine (R) and lysine (K) were calculated to estimate cold adaptation at amino-acid level. 
 
