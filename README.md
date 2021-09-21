@@ -1,5 +1,5 @@
 
-# A pipline for Molecular adaptational analysis	
+# Pipline for Molecular adaptational analysis	
 
 Publication Link: (https://www.sciencedirect.com/science/article/abs/pii/S0888754320320371)
 
