@@ -99,4 +99,4 @@ No of Neutral adaptated proteins : "NEUTRAL_ADAPTATED_PROTEINS_name_score"
 To see whole molecular analysis results go to the "molecular_adaptational_analysis" Directory 
 			
 
-Please don't hesitate to post on *Issues* or contact me (khatriabhi2319@gmail.com) /http://14.139.59.211/fgcsl_lab/people.php# for help.
+Please don't hesitate to post on *Issues* or contact me (khatriabhi2319@gmail.com) #http://fgcsl.ihbt.res.in/fgcsl/people.php for help.
